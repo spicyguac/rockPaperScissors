@@ -13,12 +13,12 @@
 
 function getHumanChoice() {
     let choice = prompt('Rock, Paper, or Scissors?');
-    console.log(choice);
+    return choice;
 }
  
 
  
  console.log(getComputerChoice());
  console.log(getHumanChoice());
- 
+
  
