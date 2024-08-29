@@ -30,6 +30,14 @@ function playRound(humanChoice, computerChoice) {
         console.log(`You win! ${humanChoice} beats ${computerChoice}`);
     }else if (humanChoice == 'rock' && computerChoice == 'scissors') {
         console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+    }else if (humanChoice == 'scissors' && computerChoice == 'rock') {
+        console.log(`You lost. ${humanChoice} doesn't beat ${computerChoice}`);
+    }else if (humanChoice == 'paper' && computerChoice == 'scissors') {
+        console.log(`You lost. ${humanChoice} doesn't beat ${computerChoice}`);
+    }else if (humanChoice == 'rock' && computerChoice == 'paper') {
+        console.log(`You lost. ${humanChoice} doesn't beat ${computerChoice}`);
+    }else{
+        console.log('Error');
     }
 }
 
