@@ -1,3 +1,6 @@
+let playerScore = 0;
+let computerScore = 0; 
+ 
  function getComputerChoice() {
     let currentRandomNumber = Math.floor(Math.random() * 3 + 1)
 
@@ -13,9 +16,10 @@
 
 function getHumanChoice() {
     let choice = prompt('Rock, Paper, or Scissors?');
-    return choice;
+    return choice;f
 }
- 
+
+
 
  
  console.log(getComputerChoice());
