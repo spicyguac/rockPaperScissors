@@ -18,38 +18,41 @@ function getHumanChoice() {
     let choice = prompt('Rock, Paper, or Scissors?');
     choice = choice.toLocaleLowerCase();
     return choice;
-}
+} 
+
+const displayResults = document.querySelector("div");
+const results = document.querySelector("p");
 
 function playRound(humanChoice, computerChoice) {
     console.log(humanChoice);
     console.log(computerChoice);
     if (humanChoice === computerChoice) {
-        console.log('tie');
-        console.log(`Score: \nHuman: ${playerScore}\nComputer ${computerScore}`);
+        displayResults.textContent = "Tie";
+        results.textContent = (`Score: \nHuman: ${playerScore}\nComputer ${computerScore}`);
     }else if ((humanChoice == 'scissors') && (computerChoice == 'paper')) {
-        console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+        displayResults.textContent = (`You win! ${humanChoice} beats ${computerChoice}`);
         playerScore += 1;
-        console.log(`Score: \nHuman: ${playerScore}\nComputer ${computerScore}`);
+        results.textContent = (`Score: \nHuman: ${playerScore}\nComputer ${computerScore}`);
     }else if (humanChoice == 'paper' && computerChoice == 'rock') {
-        console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+        displayResults.textContent = (`You win! ${humanChoice} beats ${computerChoice}`);
         playerScore += 1;
-        console.log(`Score: \nHuman: ${playerScore}\nComputer ${computerScore}`);
+        results.textContent = (`Score: \nHuman: ${playerScore}\nComputer ${computerScore}`);
     }else if (humanChoice == 'rock' && computerChoice == 'scissors') {
-        console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+        displayResults.textContent = (`You win! ${humanChoice} beats ${computerChoice}`);
         playerScore += 1;
-        console.log(`Score: \nHuman: ${playerScore}\nComputer ${computerScore}`);
+        results.textContent = (`Score: \nHuman: ${playerScore}\nComputer ${computerScore}`);
     }else if (humanChoice == 'scissors' && computerChoice == 'rock') {
-        console.log(`You lost. ${humanChoice} doesn't beat ${computerChoice}`);
+        displayResults.textContent = (`You lost. ${humanChoice} doesn't beat ${computerChoice}`);
         computerScore += 1;
-        console.log(`Score: \nHuman: ${playerScore}\nComputer ${computerScore}`);
+        results.textContent = (`Score: \nHuman: ${playerScore}\nComputer ${computerScore}`);
     }else if (humanChoice == 'paper' && computerChoice == 'scissors') {
-        console.log(`You lost. ${humanChoice} doesn't beat ${computerChoice}`);
+        displayResults.textContent = (`You lost. ${humanChoice} doesn't beat ${computerChoice}`);
         computerScore += 1;
-        console.log(`Score: \nHuman: ${playerScore}\nComputer ${computerScore}`);
+        results.textContent = (`Score: \nHuman: ${playerScore}\nComputer ${computerScore}`);
     }else if (humanChoice == 'rock' && computerChoice == 'paper') {
-        console.log(`You lost. ${humanChoice} doesn't beat ${computerChoice}`);
+        displayResults.textContent = (`You lost. ${humanChoice} doesn't beat ${computerChoice}`);
         computerScore += 1;
-        console.log(`Score: \nHuman: ${playerScore}\nComputer ${computerScore}`);
+        results.textContent = (`Score: \nHuman: ${playerScore}\nComputer ${computerScore}`);
     }else{
         console.log('Error');
     }
@@ -84,4 +87,5 @@ btnS.addEventListener("click", () =>{
     playRound(btnS.id,getComputerChoice());
 
 })
+
 
