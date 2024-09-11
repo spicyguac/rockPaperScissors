@@ -59,14 +59,29 @@ function playGame() {
     /* for (i = 0; i < 5; i++) { 
         playRound(getHumanChoice(),getComputerChoice());
     } */
+
+    
 }
 
-const btnR = document.querySelector("#btnR");
-const btnP = document.querySelector("btnP");
-const btnS = document.querySelector("btnS");
+const btnR = document.querySelector("#rock");
+const btnP = document.querySelector("#paper");
+const btnS = document.querySelector("#scissors");
+        
+btnR.addEventListener("click", () =>{ 
 
+    playRound(btnR.id,getComputerChoice());
 
+});        
 
-playGame();
+btnP.addEventListener("click", () =>{
 
- 
+    playRound(btnP.id,getComputerChoice());
+
+})
+
+btnS.addEventListener("click", () =>{
+
+    playRound(btnS.id,getComputerChoice());
+
+})
+
