@@ -56,11 +56,17 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
-    for (i = 0; i < 5; i++) { 
+    /* for (i = 0; i < 5; i++) { 
         playRound(getHumanChoice(),getComputerChoice());
-    }
+    } */
 }
- 
+
+const btnR = document.querySelector("#btnR");
+const btnP = document.querySelector("btnP");
+const btnS = document.querySelector("btnS");
+
+
+
 playGame();
 
  
